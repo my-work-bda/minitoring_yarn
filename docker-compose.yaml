@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  yarn-scraping:
+    image: kevinity310/yarn-scraping:v2
+    environment:
+      - url_yarn=http://10.206.24.14:31140/cluster
+      - mysql_access=admin_bodha:admin_bodha_2wsx1qaz@10.206.24.14:30912/de_bodha
+      - interval=5
+    command: ["python", "main.py", "yarn_monitoring", "yarn_list_jobs", "yarn_user_resource_test"]
+    restart: always
+

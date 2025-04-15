@@ -22,9 +22,9 @@ logging.basicConfig(
     ]  
 )  
   
-url_yarn = os.environ.get('url_yarn')  
-mysql_access = os.environ.get('mysql_access')  
-interval = int(os.environ.get('interval'))  
+url_yarn = os.environ.get('URL_YARN')  
+mysql_access = os.environ.get('MYSQL_ACCESS')  
+interval = int(os.environ.get('INTERVAL'))  
   
 # Get table names from command-line arguments  
 if len(sys.argv) != 4:  
